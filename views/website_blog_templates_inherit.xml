@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="oepetstore.opt_blog_featured_posts" name="Featured Post" priority="10"
+        inherit_id="website_blog.index_right" active="True" customize_show="True">
+        <xpath expr="//div[@id='main_column']" position="attributes">
+            <attribute name="class">col-sm-8</attribute>
+        </xpath>
+        <xpath expr="//div[@id='blog_right_column']" position="inside">
+            <section class="mt32 mb32">
+                <t t-if="featured_post_number > 0">
+                    <h4>Featured Post</h4>
+                    <ul class="nav nav-pills nav-stacked">
+                        <t t-foreach="featured_posts" t-as="featured_post">
+                            <li>
+                                <a t-att-href="featured_post.website_url"><span t-field="featured_post.name"/></a>
+                            </li>
+                        </t>
+                    </ul>
+                </t>
+            </section>
+        </xpath>
+    </template>
+</odoo>
