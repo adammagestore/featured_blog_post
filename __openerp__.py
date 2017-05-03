@@ -1,32 +1,23 @@
 {
-    'name' : 'OpenERP Pet Store',
+    'name' : 'Featured Blog Post',
     'version': '1.0',
-    'summary': 'Sell pet toys',
+    'summary': 'Display featured blog post on right column',
     'category': 'Tools',
     'description':
         """
-OpenERP Pet Store
+Featured Blog Post module
 =================
+    A module to display the featured blog post on right column
 
-A wonderful application to sell pet toys.
         """,
     'data': [
-        # "petstore.xml",
-        # "petstore_data.xml",
-        "views/snippet/snippet_template.xml",
-        "views/newest_blog_post.xml",
-        "views/thesameblogpost.xml",
-        "views/latest_blog_post_x.xml",
         "views/website_blog_view_inherit.xml",
         "views/website_blog_templates_inherit.xml",
-        # "oepetstore.message_of_the_day.csv",
     ],
     'depends' : [
-        'website_blog',
-        'sale_stock'
+        'website_blog'
     ],
     'qweb': [
-        # 'static/src/xml/petstore.xml',
     ],
     'application': True,
 }
